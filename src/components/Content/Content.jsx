@@ -256,15 +256,20 @@ class Content extends React.PureComponent {
     '(?:[/?#](?:\\S*[^\\s!"\'()*,-.:;<>?\\[\\]_`{|}~]|))?)';
     const emailRegexString = '([a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+))';
     const emailRegex = new RegExp(emailRegexString, 'gi');
+    const urlRegex = new RegExp(urlRegexString, 'gi');
     const combinedRegex = new RegExp(`${urlRegexString}|${emailRegexString}`, 'gi');
     let markedText = text.split(combinedRegex);
     markedText = markedText.filter((x) => x);
-    for (let index = 1; index < markedText.length; index += 2) {
+    for (let index = 0; index < markedText.length; index += 1) {
       if (!markedText[index] || !markedText[index].length) {
         markedText[index] = null;
         continue;
       }
       const isEmail = markedText[index].match(emailRegex);
+      const isUrl = markedText[index].match(urlRegex);
+      if (!isEmail && !isUrl) {
+        continue;
+      }
       const modifier = isEmail ? 'email' : 'link';
       const link = isEmail ? `mailto:${markedText[index]}` : markedText[index];
       markedText[index] = (
