@@ -258,6 +258,7 @@ class Content extends React.PureComponent {
     const emailRegex = new RegExp(emailRegexString, 'gi');
     const urlRegex = new RegExp(urlRegexString, 'gi');
     const combinedRegex = new RegExp(`${urlRegexString}|${emailRegexString}`, 'gi');
+
     let markedText = text.split(combinedRegex);
     markedText = markedText.filter((x) => x);
     for (let index = 0; index < markedText.length; index += 1) {
@@ -298,13 +299,26 @@ class Content extends React.PureComponent {
     if (!date) {
       return null;
     }
+    const monthString = new Array();
+    monthString[0] = 'Jan';
+    monthString[1] = 'Feb';
+    monthString[2] = 'Mar';
+    monthString[3] = 'Apr';
+    monthString[4] = 'May';
+    monthString[5] = 'Jun';
+    monthString[6] = 'Jul';
+    monthString[7] = 'Aug';
+    monthString[8] = 'Sep';
+    monthString[9] = 'Oct';
+    monthString[10] = 'Nov';
+    monthString[11] = 'Dec';
     let hours = date.getHours();
     let minutes = date.getMinutes();
     const ampm = hours >= 12 ? 'PM' : 'AM';
     hours = hours % 12;
     hours = hours ? hours : 12;
     minutes = minutes < 10 ? `0${minutes}` : minutes;
-    const timestamp = `${date.getDate()}/${date.getMonth() + 1} ${hours}:${minutes} ${ampm}`;
+    const timestamp = `${date.getDate()} ${monthString[date.getMonth()]} ${hours}:${minutes} ${ampm}`;
     return (
       <div className={cx(
         'react-chat__message-content-timestamp',

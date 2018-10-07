@@ -148,7 +148,7 @@ const messagesStub = [
     messageId: '007',
     senderId: '3',
     text: 'https://google.com, http://google.com, gm@gmail.com',
-    timeStamp: '2018-09-23T13:13:04Z',
+    timeStamp: '2018-10-01T13:13:04Z',
     type: 'text'
   },
 ];
