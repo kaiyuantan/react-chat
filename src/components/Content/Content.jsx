@@ -318,7 +318,8 @@ class Content extends React.PureComponent {
     hours = hours % 12;
     hours = hours ? hours : 12;
     minutes = minutes < 10 ? `0${minutes}` : minutes;
-    const timestamp = `${date.getDate()} ${monthString[date.getMonth()]} ${hours}:${minutes} ${ampm}`;
+    const dateString = minutes = date.getDate() < 10 ? `0${date.getDate()}` : date.getDate();
+    const timestamp = `${dateString} ${monthString[date.getMonth()]} ${hours}:${minutes} ${ampm}`;
     return (
       <div className={cx(
         'react-chat__message-content-timestamp',
