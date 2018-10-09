@@ -38,7 +38,7 @@ class ChatRoom extends React.Component {
     const messages = this.getMessages();
     const dividers = this.getDividers();
     const content = messages.concat(dividers);
-    content.sort((first, second) => first.date - second.date);
+    //content.sort((first, second) => first.date - second.date);
     const elements = content.map((item) => item.element);
     return (
       <AppProvider {...stylingContext}>

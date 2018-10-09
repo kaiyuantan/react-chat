@@ -89,68 +89,185 @@ const menuActionsStub = [
 ];
 
 const messagesStub = [
-  {
-    messageId: '000',
-    text: 'Nick Fury created \'Avengers Assemble\'. \n This is the beginning of the conversation.',
-    timeStamp: '2018-09-23T12:55:21Z',
-    type: 'system'
+{
+  messageId: "system-head",
+  text: "This is the beginning of your conversation with Kai Yuan.",
+  timeStamp: "2018-09-03T20:53:40.000Z",
+  type: "system"
+},
+{
+  isDelivered: true,
+  messageId: "671",
+  senderId: "2",
+  text: "HEY!",
+  timeStamp: "2018-09-03T20:53:41Z",
+  type: "text"
+},
+{
+  isDelivered: true,
+  messageId: "672",
+  senderId: "2",
+  text: "hey",
+  timeStamp: "2018-09-03T20:53:49Z",
+  type: "text"
+},
+{
+  eventName: "invitation_accept",
+  messageId: "673",
+  text: "",
+  timeStamp: "2018-09-03T20:56:59Z",
+  type: "event"
+},
+{
+  isDelivered: true,
+  messageId: "674",
+  senderId: "5",
+  text: "Hey Kai Yuan, Thank you for reaching out. I am interested to learn more. I am mostly available on 1900 hrs +8 GMT on Saturdays. You may contact me at t_ky, 96620378.",
+  timeStamp: "2018-09-03T20:57:00Z",
+  type: "text"
+},
+{
+  isDelivered: true,
+  messageId: "675",
+  senderId: "5",
+  text: "Hey Kai Yuan,Can I check on the status of this invite? Do let me know if it is not possible to schedule it on Saturday.",
+  timeStamp: "2018-09-03T21:10:03Z",
+  type: "text"
+},
+{
+  isDelivered: true,
+  messageId: "676",
+  senderId: "2",
+  text: "testing with smiley",
+  timeStamp: "2018-09-03T21:25:06Z",
+  type: "text"
+},
+{
+  isDelivered: true,
+  messageId: "677",
+  senderId: "5",
+  text: "Okay! Great! ",
+  timeStamp: "2018-09-03T21:25:29Z",
+  type: "text"
+},
+{
+  isDelivered: true,
+  messageId: "682",
+  senderId: "2",
+  text: "testing",
+  timeStamp: "2018-09-04T11:12:28Z",
+  type: "text"
+},
+{
+  isDelivered: true,
+  messageId: "1097",
+  senderId: "2",
+  text: "testing",
+  timeStamp: "2018-10-08T05:46:16Z",
+  type: "text"
+},
+{
+  isDelivered: true,
+  messageId: "1115",
+  senderId: "2",
+  text: "hello",
+  timeStamp: "2018-10-08T14:46:08Z",
+  type: "text"
+},
+{
+  isDelivered: true,
+  messageId: "1116",
+  senderId: "2",
+  text: "testing with smiley",
+  timeStamp: "2018-10-08T14:47:18Z",
+  type: "text"
+},
+{
+  isDelivered: true,
+  messageId: "1117",
+  senderId: "2",
+  text: "hello again",
+  timeStamp: "2018-10-08T14:51:04Z",
+  type: "text"
+},
+{
+  isDelivered: true,
+  messageId: "1138",
+  senderId: "2",
+  text: "testing123",
+  timeStamp: "2018-10-08T19:19:30Z",
+  type: "text"
+},
+{
+  isDelivered: true,
+  messageId: "1143",
+  senderId: "2",
+  text: "LOLLOL~",
+  timeStamp: "2018-10-08T21:26:11Z",
+  type: "text"
   },
-  {
-    isDelivered: true,
-    isRead: true,
-    messageId: '001',
-    senderId: '6',
-    text: 'Okay y\'all own time own target carry on ah!',
-    timeStamp: '2018-09-23T12:56:06Z',
-    type: 'text'
-  },
-  {
-    isDelivered: true,
-    messageId: '002',
-    senderId: '1',
-    text: 'Don\'t waste time liao. Anyone in for prata?',
-    timeStamp: '2018-09-23T12:56:43Z',
-    type: 'text'
-  },
-  {
-    isDelivered: true,
-    messageId: '003',
-    senderId: '2',
-    text: 'I free 6pm. Ai mai? https://www.ameenmakanhouse.com/',
-    timeStamp: '2018-09-23T13:03:28Z',
-    type: 'text'
-  },
-  {
-    isDelivered: true,
-    messageId: '004',
-    senderId: '2',
-    text: 'Wait maybe 7pm leh...',
-    timeStamp: '2018-09-23T13:03:47Z',
-    type: 'text'
-  },
-  {
-    isDelivered: true,
-    messageId: '005',
-    senderId: '3',
-    text: 'Eh I coming in from Tuas.',
-    timeStamp: '2018-09-23T13:11:57Z',
-    type: 'text'
-  },
-  {
-    isDelivered: true,
-    messageId: '006',
-    senderId: '3',
-    text: 'Might late and scared MRT breakdown =/',
-    timeStamp: '2018-09-23T13:12:20Z',
-    type: 'text'
-  },
-  {
-    messageId: '007',
-    senderId: '3',
-    text: 'https://google.com, http://google.com, gm@gmail.com',
-    timeStamp: '2018-10-01T13:13:04Z',
-    type: 'text'
-  },
+  // {
+  //   messageId: '000',
+  //   text: 'Nick Fury created \'Avengers Assemble\'. \n This is the beginning of the conversation.',
+  //   timeStamp: '2018-09-23T12:55:21Z',
+  //   type: 'system'
+  // },
+  // {
+  //   isDelivered: true,
+  //   isRead: true,
+  //   messageId: '001',
+  //   senderId: '6',
+  //   text: 'Okay y\'all own time own target carry on ah!',
+  //   timeStamp: '2018-09-23T12:56:06Z',
+  //   type: 'text'
+  // },
+  // {
+  //   isDelivered: true,
+  //   messageId: '002',
+  //   senderId: '1',
+  //   text: 'Don\'t waste time liao. Anyone in for prata?',
+  //   timeStamp: '2018-09-23T12:56:43Z',
+  //   type: 'text'
+  // },
+  // {
+  //   isDelivered: true,
+  //   messageId: '003',
+  //   senderId: '2',
+  //   text: 'I free 6pm. Ai mai? https://www.ameenmakanhouse.com/',
+  //   timeStamp: '2018-09-23T13:03:28Z',
+  //   type: 'text'
+  // },
+  // {
+  //   isDelivered: true,
+  //   messageId: '004',
+  //   senderId: '2',
+  //   text: 'Wait maybe 7pm leh...',
+  //   timeStamp: '2018-09-23T13:03:47Z',
+  //   type: 'text'
+  // },
+  // {
+  //   isDelivered: true,
+  //   messageId: '005',
+  //   senderId: '3',
+  //   text: 'Eh I coming in from Tuas.',
+  //   timeStamp: '2018-09-23T13:11:57Z',
+  //   type: 'text'
+  // },
+  // {
+  //   isDelivered: true,
+  //   messageId: '006',
+  //   senderId: '3',
+  //   text: 'Might late and scared MRT breakdown =/',
+  //   timeStamp: '2018-09-23T13:12:20Z',
+  //   type: 'text'
+  // },
+  // {
+  //   messageId: '007',
+  //   senderId: '3',
+  //   text: 'https://google.com, http://google.com, gm@gmail.com',
+  //   timeStamp: '2018-10-01T13:13:04Z',
+  //   type: 'text'
+  // },
 ];
 
 const usersStub = {
